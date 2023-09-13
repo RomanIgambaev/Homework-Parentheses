@@ -1,14 +1,14 @@
 import java.util.Scanner;
 
 public class Main {
-    static boolean chekingValidParentheses(String s) {
+    static boolean chekingValidParentheses(String arParentheses) {
         int left = 0;
         int right = 0;
 
-        for (char c : s.toCharArray()) {
-            if (c == '(') {
+        for (char parenthes : arParentheses.toCharArray()) {
+            if (parenthes == '(') {
                 left++;
-            } else if (c == ')') {
+            } else if (parenthes == ')') {
                 right++;
             } else {
                 System.out.println("Можно вводить только скобки");
@@ -19,7 +19,6 @@ public class Main {
                 return false;
             }
         }
-
         return left == right;
     }
 
